@@ -254,7 +254,7 @@ body::before {
   min-height: 100svh;
   background:
     linear-gradient(90deg, rgba(40,18,11,.98) 0%, rgba(70,31,19,.9) 44%, rgba(86,39,24,.55) 100%),
-    url("assets/austine-full.jpg") center 28% / cover no-repeat;
+    url("assets/austine-city-banner.jpg") center center / cover no-repeat;
   overflow: hidden;
 }
 .hero::before, .hero::after {
@@ -334,7 +334,7 @@ footer { background: #1b0c08; border-top: 1px solid rgba(255,255,255,.14); }
 }
 
 @media (max-width: 700px) {
-  .hero { background: linear-gradient(180deg, rgba(42,18,11,.9), rgba(55,24,15,.96)), url("assets/austine-full.jpg") center 22% / cover no-repeat; }
+  .hero { background: linear-gradient(180deg, rgba(42,18,11,.88), rgba(55,24,15,.96)), url("assets/austine-city-banner.jpg") center center / cover no-repeat; }
   .hero-frame { display: none; }
   .hero-visual { min-height: 95px; margin-top: 0; }
   .hero-stamp { bottom: 0; }
