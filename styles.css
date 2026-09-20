@@ -204,3 +204,139 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5r
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Reference-inspired cinematic theme */
+:root {
+  --cream: #f7eadf;
+  --paper: #f3dfd1;
+  --terracotta: #d48362;
+  --terracotta-dark: #b55f42;
+  --brown: #733d2d;
+  --ink: #27150f;
+  --muted: #d5b9a8;
+  --sand: #e8b89e;
+  --mahogany: #32170f;
+  --copper: #c66f4f;
+  --line: rgba(255, 244, 236, .2);
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(212,131,98,.14), transparent 28rem),
+    linear-gradient(145deg, #2d160f 0%, #4a2418 48%, #27130d 100%);
+  color: var(--cream);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .17;
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.site-header {
+  color: #fff8f2;
+  background: rgba(151, 75, 51, .78);
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.brand-mark { background: transparent; border: 1px solid rgba(255,255,255,.72); color: #fff; border-radius: 50%; }
+.site-nav a:hover { color: #fff; opacity: .72; }
+.nav-cta { border-color: rgba(255,255,255,.65); }
+.menu-toggle { border-color: rgba(255,255,255,.38); }
+.menu-toggle span { background: #fff; }
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  background:
+    linear-gradient(90deg, rgba(40,18,11,.98) 0%, rgba(70,31,19,.9) 44%, rgba(86,39,24,.55) 100%),
+    url("assets/austine-full.jpg") center 28% / cover no-repeat;
+  overflow: hidden;
+}
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+}
+.hero::before { width: 560px; height: 560px; right: -170px; top: 11%; }
+.hero::after { width: 360px; height: 360px; right: 2%; top: 27%; }
+.hero-copy { position: relative; z-index: 2; }
+.hero .eyebrow, .eyebrow { color: var(--sand); }
+h1 { color: #fff8f2; text-shadow: 0 3px 25px rgba(25,10,5,.24); }
+h1 em { color: var(--sand); }
+.hero-text { color: rgba(255,246,239,.78); }
+.button-primary { background: #fff7f0; color: var(--ink); }
+.button-primary:hover { background: var(--sand); }
+.hero .button-text { color: #fff; }
+.hero-visual { opacity: .92; }
+.hero-frame { border: 1px solid rgba(255,255,255,.48); background: rgba(255,255,255,.08); box-shadow: 0 28px 70px rgba(18,7,3,.35); }
+.hero-frame img { mix-blend-mode: normal; filter: sepia(.12) saturate(.72) contrast(1.08); }
+.vertical-note { color: rgba(255,255,255,.8); }
+.hero-stamp { background: rgba(190,96,65,.88); border: 1px solid rgba(255,255,255,.48); }
+
+.statement { background: #1f0f0a; border-block: 1px solid rgba(255,255,255,.16); }
+.statement span { color: var(--sand); }
+.section-label { color: rgba(255,239,229,.55); }
+
+.about { position: relative; background: linear-gradient(135deg, #3a1c13, #572a1c); }
+.about::after { content: "✦"; position: absolute; right: 6vw; top: 5rem; color: rgba(255,255,255,.65); font-size: 3rem; }
+.about-image { border: 1px solid rgba(255,255,255,.22); box-shadow: 0 24px 60px rgba(21,8,4,.28); }
+.about-image img { filter: sepia(.13) saturate(.78) contrast(1.05); }
+.about-copy > p:not(.eyebrow) { color: rgba(255,239,229,.7); }
+.about-facts { border-top-color: var(--line); }
+.about-facts div { border-bottom-color: var(--line); }
+.about-facts strong { color: var(--sand); }
+
+.skills { background: linear-gradient(115deg, rgba(124,61,40,.94), rgba(73,33,22,.98)); }
+.skills-grid { border-color: var(--line); }
+.skill-card { background: rgba(255,255,255,.035); border-color: var(--line); transition: background .25s ease, transform .25s ease; }
+.skill-card:hover { background: rgba(255,255,255,.075); transform: translateY(-4px); }
+.skill-card > span { color: var(--sand); }
+.skill-card p { color: rgba(255,239,229,.68); }
+.skill-card li, .tags span { border-color: rgba(255,255,255,.24); }
+
+.projects { background: #f1dfd2; color: #321b14; }
+.projects .section-label { color: rgba(50,27,20,.55); }
+.projects .eyebrow { color: var(--terracotta-dark); }
+.projects > .projects-heading .button-text { color: #321b14; }
+.featured-project { background: linear-gradient(120deg, #32170f, #663421); border: 1px solid rgba(255,255,255,.16); box-shadow: 0 26px 65px rgba(55,25,15,.2); }
+.analytics-visual { background: linear-gradient(145deg, #8b4933, #4d2418); }
+.project-card { background: #fff5ed; border-color: rgba(74,37,25,.16); box-shadow: 0 18px 45px rgba(80,38,23,.1); }
+.project-card-copy > p:not(.project-type) { color: #765d52; }
+.project-type { color: #a05239; }
+.project-color-block { background: linear-gradient(140deg, #7d422f, #3c1c13); }
+.project-color-block.worship { background: linear-gradient(140deg, #3a211a, #160d0a); }
+
+.story { background: linear-gradient(145deg, #2a130d, #472117 60%, #32160f); }
+.story-card { background: rgba(125,61,40,.3); border-color: rgba(255,255,255,.18); }
+.story-photo img { filter: sepia(.18) saturate(.75) contrast(1.08); }
+
+.music { background: #2a130d; }
+.music-panel { border: 1px solid rgba(255,255,255,.22); }
+
+.contact { background: linear-gradient(120deg, #a85438, #6f3525); }
+.contact-image { border: 1px solid rgba(255,255,255,.25); }
+.contact-image img { filter: sepia(.2) saturate(.65) contrast(1.08); }
+.social-links a { transition: opacity .2s ease; }
+.social-links a:hover { opacity: .65; }
+footer { background: #1b0c08; border-top: 1px solid rgba(255,255,255,.14); }
+
+@media (max-width: 980px) {
+  .site-nav { background: rgba(74,35,23,.98); color: #fff; }
+  .hero { background-position: 62% center; }
+  .hero::before { right: -330px; }
+}
+
+@media (max-width: 700px) {
+  .hero { background: linear-gradient(180deg, rgba(42,18,11,.9), rgba(55,24,15,.96)), url("assets/austine-full.jpg") center 22% / cover no-repeat; }
+  .hero-frame { display: none; }
+  .hero-visual { min-height: 95px; margin-top: 0; }
+  .hero-stamp { bottom: 0; }
+  .about::after { right: 1.5rem; top: 3.5rem; font-size: 2rem; }
+}
