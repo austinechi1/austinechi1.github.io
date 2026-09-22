@@ -308,16 +308,37 @@ h1 em { color: var(--sand); }
 .skill-card p { color: rgba(255,239,229,.68); }
 .skill-card li, .tags span { border-color: rgba(255,255,255,.24); }
 
+.tool-group + .tool-group { margin-top: 2.5rem; }
+.tool-group-title { margin-bottom: 1rem; color: var(--sand); font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .toolkit-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
-.tool-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; min-height: 180px; padding: 1.5rem; border: 1px solid var(--line); background: rgba(255,255,255,.045); transition: transform .25s ease, background .25s ease; }
+.toolkit-grid-web { grid-template-columns: repeat(7, 1fr); }
+.toolkit-grid-media { grid-template-columns: repeat(4, 1fr); }
+.tool-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; min-height: 174px; padding: 1.35rem .8rem; border: 1px solid var(--line); background: rgba(255,255,255,.045); text-align: center; transition: transform .25s ease, background .25s ease; }
 .tool-item:hover { transform: translateY(-4px); background: rgba(255,255,255,.085); }
-.tool-item img { width: 52px; height: 52px; object-fit: contain; }
-.tool-item span { font-family: var(--display); font-size: 1.25rem; }
+.tool-item > span:last-child { min-height: 2.1rem; display: flex; align-items: center; font-family: var(--display); font-size: 1.08rem; line-height: 1.2; }
+.tool-icon, .ai-icon-frame { display: grid; place-items: center; flex: 0 0 62px; width: 62px; height: 62px; overflow: hidden; border-radius: 14px; background: rgba(255,255,255,.94); color: #fff; font-family: var(--sans); font-size: 1.05rem; font-weight: 800; letter-spacing: -.03em; }
+.tool-icon img, .ai-icon-frame img { width: 46px; height: 46px; object-fit: contain; }
+.image-icon img { width: 48px; height: 48px; }
+.mysql-icon { background: #00758f; }
+.postgres-icon { background: #336791; }
+.python-icon { background: linear-gradient(135deg, #3776ab 50%, #ffd343 50%); color: #fff; }
+.html-icon { background: #e34f26; font-size: 1.6rem; }
+.css-icon { background: #1572b6; font-size: 1.6rem; }
+.js-icon { background: #f7df1e; color: #1d1d1d; }
+.php-icon { background: #777bb4; font-size: 1rem; font-style: italic; }
+.laravel-icon { background: #ff2d20; font-size: 1.6rem; }
+.git-icon { background: #f05032; }
+.github-icon { background: #181717; }
+.premiere-icon { background: #00005b; color: #9999ff; }
+.photoshop-icon { background: #001e36; color: #31a8ff; }
+.illustrator-icon { background: #330000; color: #ff9a00; }
+.aftereffects-icon { background: #00005b; color: #9999ff; }
 .ai-toolkit { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
 .ai-toolkit > p { margin-bottom: 1rem; color: var(--sand); font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .ai-tools { display: flex; flex-wrap: wrap; gap: 1rem; }
 .ai-tools div { display: flex; align-items: center; gap: .7rem; padding: .8rem 1.1rem; border: 1px solid var(--line); background: rgba(255,255,255,.035); }
-.ai-tools img { width: 25px; height: 25px; object-fit: contain; }
+.ai-icon-frame { flex-basis: 42px; width: 42px; height: 42px; border-radius: 10px; }
+.ai-icon-frame img { width: 34px; height: 34px; }
 
 .analytics-projects { display: grid; gap: 2rem; }
 .analytics-case { overflow: hidden; background: linear-gradient(120deg, #32170f, #663421); color: var(--cream); border: 1px solid rgba(255,255,255,.16); box-shadow: 0 26px 65px rgba(55,25,15,.2); }
@@ -371,7 +392,7 @@ footer { background: #1b0c08; border-top: 1px solid rgba(255,255,255,.14); }
   .site-nav { background: rgba(74,35,23,.98); color: #fff; }
   .hero { background-position: 62% center; }
   .hero::before { right: -330px; }
-  .toolkit-grid { grid-template-columns: repeat(3, 1fr); }
+  .toolkit-grid, .toolkit-grid-web, .toolkit-grid-media { grid-template-columns: repeat(3, 1fr); }
   .beyond-panel { grid-template-columns: 1fr; }
 }
 
@@ -381,7 +402,7 @@ footer { background: #1b0c08; border-top: 1px solid rgba(255,255,255,.14); }
   .hero-visual { min-height: 95px; margin-top: 0; }
   .hero-stamp { bottom: 0; }
   .about::after { right: 1.5rem; top: 3.5rem; font-size: 2rem; }
-  .toolkit-grid { grid-template-columns: repeat(2, 1fr); }
+  .toolkit-grid, .toolkit-grid-web, .toolkit-grid-media { grid-template-columns: repeat(2, 1fr); }
   .tool-item { min-height: 145px; }
   .case-grid { grid-template-columns: 1fr; }
   .beyond-panel img { height: 330px; }
