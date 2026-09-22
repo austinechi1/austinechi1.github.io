@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">UK Online Retail Executive Dashboard</title>
+  <desc id="desc">A Power BI style retail dashboard preview with KPI cards, a monthly sales trend, top customer bars, and customer value distribution.</desc>
+  <rect width="1400" height="760" rx="28" fill="#f7f3ef"/>
+  <rect x="34" y="30" width="1332" height="78" rx="18" fill="#291811"/>
+  <text x="72" y="78" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#fff7f0">UK ONLINE RETAIL</text>
+  <text x="72" y="99" font-family="Arial, sans-serif" font-size="13" letter-spacing="3" fill="#d99b7e">EXECUTIVE PERFORMANCE DASHBOARD</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(34 135)"><rect width="310" height="112" rx="16" fill="#ffffff" stroke="#eadbd2"/><text x="24" y="34" font-size="13" font-weight="700" fill="#8a6b5c">TOTAL REVENUE</text><text x="24" y="82" font-size="34" font-weight="700" fill="#3a2118">Sales</text><circle cx="267" cy="57" r="25" fill="#d87956"/><path d="M253 57h28M267 43v28" stroke="#fff" stroke-width="4"/></g>
+    <g transform="translate(363 135)"><rect width="310" height="112" rx="16" fill="#ffffff" stroke="#eadbd2"/><text x="24" y="34" font-size="13" font-weight="700" fill="#8a6b5c">TOTAL ORDERS</text><text x="24" y="82" font-size="34" font-weight="700" fill="#3a2118">Orders</text><circle cx="267" cy="57" r="25" fill="#6f8f82"/><path d="M254 48h26v22h-26zM259 43h16" fill="none" stroke="#fff" stroke-width="3"/></g>
+    <g transform="translate(692 135)"><rect width="310" height="112" rx="16" fill="#ffffff" stroke="#eadbd2"/><text x="24" y="34" font-size="13" font-weight="700" fill="#8a6b5c">ACTIVE CUSTOMERS</text><text x="24" y="82" font-size="34" font-weight="700" fill="#3a2118">Customers</text><circle cx="267" cy="57" r="25" fill="#617fa5"/><circle cx="267" cy="50" r="8" fill="none" stroke="#fff" stroke-width="3"/><path d="M253 70c3-11 25-11 28 0" fill="none" stroke="#fff" stroke-width="3"/></g>
+    <g transform="translate(1021 135)"><rect width="345" height="112" rx="16" fill="#ffffff" stroke="#eadbd2"/><text x="24" y="34" font-size="13" font-weight="700" fill="#8a6b5c">AVERAGE ORDER VALUE</text><text x="24" y="82" font-size="34" font-weight="700" fill="#3a2118">AOV</text><circle cx="300" cy="57" r="25" fill="#b9904f"/><path d="M288 57h24M300 45v24" stroke="#fff" stroke-width="4"/></g>
+  </g>
+  <g transform="translate(34 275)">
+    <rect width="820" height="438" rx="18" fill="#fff" stroke="#eadbd2"/>
+    <text x="28" y="43" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#3a2118">Monthly sales performance</text>
+    <g stroke="#eee4dd" stroke-width="1"><path d="M70 105H785M70 180H785M70 255H785M70 330H785M70 405H785"/></g>
+    <path d="M75 350 C140 330 175 286 230 298 S335 205 395 226 S485 175 545 190 S650 107 715 132 S760 95 790 70" fill="none" stroke="#d87956" stroke-width="7" stroke-linecap="round"/>
+    <path d="M75 350 C140 330 175 286 230 298 S335 205 395 226 S485 175 545 190 S650 107 715 132 S760 95 790 70 L790 405 L75 405Z" fill="#d87956" opacity=".12"/>
+    <g fill="#d87956"><circle cx="75" cy="350" r="7"/><circle cx="230" cy="298" r="7"/><circle cx="395" cy="226" r="7"/><circle cx="545" cy="190" r="7"/><circle cx="715" cy="132" r="7"/><circle cx="790" cy="70" r="7"/></g>
+  </g>
+  <g transform="translate(875 275)" font-family="Arial, sans-serif">
+    <rect width="491" height="210" rx="18" fill="#fff" stroke="#eadbd2"/>
+    <text x="25" y="40" font-size="18" font-weight="700" fill="#3a2118">Top customers</text>
+    <g fill="#617fa5"><rect x="26" y="68" width="382" height="18" rx="9"/><rect x="26" y="99" width="330" height="18" rx="9"/><rect x="26" y="130" width="276" height="18" rx="9"/><rect x="26" y="161" width="218" height="18" rx="9"/></g>
+  </g>
+  <g transform="translate(875 503)" font-family="Arial, sans-serif">
+    <rect width="491" height="210" rx="18" fill="#fff" stroke="#eadbd2"/>
+    <text x="25" y="40" font-size="18" font-weight="700" fill="#3a2118">Customer value</text>
+    <g transform="translate(125 118)"><circle r="62" fill="none" stroke="#eee4dd" stroke-width="28"/><path d="M0-62A62 62 0 0 1 58 22" fill="none" stroke="#d87956" stroke-width="28"/><path d="M58 22A62 62 0 0 1 -35 51" fill="none" stroke="#6f8f82" stroke-width="28"/></g>
+    <g font-size="13" fill="#765d52"><circle cx="245" cy="82" r="6" fill="#d87956"/><text x="260" y="87">High value</text><circle cx="245" cy="116" r="6" fill="#6f8f82"/><text x="260" y="121">Growth</text><circle cx="245" cy="150" r="6" fill="#eee4dd"/><text x="260" y="155">Developing</text></g>
+  </g>
+</svg>
