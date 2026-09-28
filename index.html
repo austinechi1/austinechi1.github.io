@@ -4,209 +4,340 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Nwachukwu Austine, a data and business analyst with experience in media production, public speaking, web development, and gospel music.">
+  <meta name="theme-color" content="#1b0c08">
   <title>Nwachukwu Austine | Data & Business Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="is-loading">
+  <!-- Preloader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark">NA</div>
+    <div class="loader-count"><span id="loaderNum">0</span>%</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- Custom cursor + scroll progress -->
+  <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Nwachukwu Austine home">
+    <a class="brand" href="#home" aria-label="Nwachukwu Austine home" data-magnetic>
       <span class="brand-mark">NA</span>
-      <span>Nwachukwu Austine</span>
+      <span class="brand-name">Nwachukwu Austine</span>
     </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about" data-num="01">About</a>
+      <a href="#projects" data-num="02">Work</a>
+      <a href="#skills" data-num="03">Toolkit</a>
+      <a href="#story" data-num="04">Beyond Data</a>
+      <a href="#contact" class="nav-cta" data-magnetic>Let’s talk <span aria-hidden="true">→</span></a>
+    </nav>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
       <span></span><span></span>
     </button>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#story">Beyond Data</a>
-      <a href="#contact" class="nav-cta">Let’s connect</a>
-    </nav>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Data · Business · Media</p>
-        <p class="hero-role">Data and Business Analyst · Information Systems and Technology</p>
-        <h1>I turn raw information into <em>clear direction.</em></h1>
-        <p class="hero-text">I transform complex data into practical insights, clear visual stories, and business recommendations that people can act on.</p>
+      <div class="hero-bg-word" aria-hidden="true">DATA</div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> Open to Data &amp; Business Analyst roles</p>
+        <h1 class="hero-title">
+          <span class="line"><span class="split">I turn raw data</span></span>
+          <span class="line"><span class="split">into <span class="rotator" aria-live="polite"><span class="rotator-word">clear direction.</span></span></span></span>
+        </h1>
+        <p class="hero-text">Data &amp; Business Analyst · Information Systems and Technology. I transform complex information into practical insights, clear visual stories, and recommendations people can act on.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore my work</a>
-          <a class="button button-text" href="mailto:austinechi.fx@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-primary" href="#projects" data-magnetic data-cursor="Go">Explore my work <span aria-hidden="true">↓</span></a>
+          <button class="btn btn-ghost copy-email" type="button" data-email="austinechi.fx@gmail.com" data-magnetic data-cursor="Copy">
+            <span class="copy-label">austinechi.fx@gmail.com</span> <span aria-hidden="true">⧉</span>
+          </button>
         </div>
       </div>
-      <div class="hero-visual reveal">
+
+      <div class="hero-visual" data-tilt>
         <div class="hero-frame">
           <img src="assets/austine-headshot.jpg" alt="Professional portrait of Nwachukwu Austine">
         </div>
+        <div class="float-chip chip-a" data-depth="30">SQL</div>
+        <div class="float-chip chip-b" data-depth="-24">Power BI</div>
+        <div class="float-chip chip-c" data-depth="18">Python</div>
+        <div class="hero-stamp" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circlePath" textLength="478" lengthAdjust="spacing">DATA · DESIGN · STORY · OPEN TO WORK · </textPath></text>
+          </svg>
+          <span>✦</span>
+        </div>
         <p class="vertical-note">Based in Russia · Open to opportunities</p>
-        <div class="hero-stamp" aria-hidden="true">DATA<br>&amp; DESIGN</div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="Professional focus">
+      <div class="marquee-track">
+        <span>Analytical thinking</span><i>✦</i><span>Visual storytelling</span><i>✦</i><span>Purposeful communication</span><i>✦</i><span>SQL · Python · Power BI</span><i>✦</i>
+        <span>Analytical thinking</span><i>✦</i><span>Visual storytelling</span><i>✦</i><span>Purposeful communication</span><i>✦</i><span>SQL · Python · Power BI</span><i>✦</i>
       </div>
     </section>
 
-    <section class="statement" aria-label="Professional focus">
-      <p>Analytical thinking</p><span>✦</span><p>Visual storytelling</p><span>✦</span><p>Purposeful communication</p>
+    <!-- STATS -->
+    <section class="stats" aria-label="Highlights">
+      <div class="stat reveal"><strong><span class="count" data-to="15035" data-format="comma">0</span></strong><p>Records cleaned &amp; analysed in StreamWave</p></div>
+      <div class="stat reveal"><strong>£<span class="count" data-to="9.77" data-decimals="2">0</span>M</strong><p>Net revenue surfaced in the UK Retail dashboard</p></div>
+      <div class="stat reveal"><strong><span class="count" data-to="8.4" data-decimals="1">0</span>%</strong><p>Return rate uncovered through data modelling</p></div>
+      <div class="stat reveal"><strong><span class="count" data-to="5">0</span>+</strong><p>Years in television &amp; media production</p></div>
     </section>
 
+    <!-- ABOUT -->
     <section class="about section" id="about">
-      <div class="section-label">01 · About</div>
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <span class="section-name">About</span>
+      </div>
       <div class="about-grid">
-        <div class="about-image reveal">
+        <div class="about-image reveal" data-tilt>
           <img src="assets/austine-full.jpg" alt="Nwachukwu Austine standing outside a modern building">
+          <span class="img-tag">Hi, I’m Austine</span>
         </div>
-        <div class="about-copy reveal">
-          <p class="eyebrow">A clear story behind the numbers</p>
-          <h2>I connect data, business questions, and clear decisions.</h2>
-          <p>My name is Nwachukwu Austine. I am an Information Systems and Technology student focused on data analytics and business analysis. I enjoy cleaning complex information, finding the pattern that matters, and presenting the result in a way people can understand and use.</p>
-          <p>My earlier experience in television and media supports this work by strengthening my communication, visual judgment, and ability to explain ideas clearly.</p>
-          <div class="about-facts">
-            <div><strong>Focus</strong><span>Data &amp; Business Analytics</span></div>
-            <div><strong>Study</strong><span>Information Systems &amp; Technology</span></div>
-            <div><strong>Current workplace</strong><span>S.H.E. Social, LLC</span></div>
-            <div><strong>Available for</strong><span>Internships &amp; Entry-Level Roles</span></div>
-          </div>
+        <div class="about-copy">
+          <h2 class="big-title split-words">I connect data, business questions, and <mark>clear decisions.</mark></h2>
+          <p class="reveal">My name is Nwachukwu Austine. I am an Information Systems and Technology student focused on data analytics and business analysis. I enjoy cleaning complex information, finding the pattern that matters, and presenting the result in a way people can understand and use.</p>
+          <p class="reveal">My earlier experience in television and media supports this work by strengthening my communication, visual judgment, and ability to explain ideas clearly.</p>
+          <dl class="about-facts reveal">
+            <div><dt>Focus</dt><dd>Data &amp; Business Analytics</dd></div>
+            <div><dt>Study</dt><dd>Information Systems &amp; Technology</dd></div>
+            <div><dt>Current workplace</dt><dd>S.H.E. Social, LLC</dd></div>
+            <div><dt>Available for</dt><dd>Internships &amp; Entry-Level Roles</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="projects section" id="projects">
-      <div class="section-label">02 · Featured Analytics Work</div>
-      <div class="projects-heading reveal">
-        <div>
-          <p class="eyebrow">Featured analytics work</p>
-          <h2>From business question to measurable insight.</h2>
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <span class="section-name">Selected Work</span>
+      </div>
+      <div class="projects-heading">
+        <h2 class="big-title split-words">From business question to <mark>measurable insight.</mark></h2>
+        <div class="filters" role="tablist" aria-label="Filter projects">
+          <button class="filter active" type="button" data-filter="all" role="tab" aria-selected="true">All <sup>6</sup></button>
+          <button class="filter" type="button" data-filter="analytics" role="tab" aria-selected="false">Analytics <sup>2</sup></button>
+          <button class="filter" type="button" data-filter="web" role="tab" aria-selected="false">Web <sup>4</sup></button>
         </div>
-        <a class="button button-text" href="https://github.com/austinechi1?tab=repositories" target="_blank" rel="noopener">View all repositories <span aria-hidden="true">↗</span></a>
       </div>
 
-      <div class="analytics-projects">
-        <article class="analytics-case reveal">
-          <div class="analytics-image"><img src="assets/streamwave-monthly-views.png" alt="StreamWave monthly viewing trend analytics chart"></div>
-          <div class="analytics-case-content">
-            <div class="project-index">01 · SQL + Python Analytics</div>
-            <h3>StreamWave Content Performance Analytics</h3>
-            <div class="case-grid">
-              <div><strong>Problem</strong><p>Which titles, genres, devices, and regions drive reach, engagement, and modeled revenue?</p></div>
-              <div><strong>Process</strong><p>Cleaned 15,035 records, built SQL analyses, explored trends in Python, and translated findings into recommendations.</p></div>
-              <div><strong>Tools</strong><p>PostgreSQL, Python, Matplotlib</p></div>
-              <div><strong>Results</strong><p>Identified Drama as the reach leader, Animation as the completion leader, and December as the peak viewing month.</p></div>
+      <div class="work-list">
+        <!-- Case 1 -->
+        <article class="case reveal" data-cat="analytics" data-tools="sql python matplotlib">
+          <button class="case-image" type="button" data-lightbox="assets/streamwave-monthly-views.png" data-cursor="Zoom" aria-label="Enlarge StreamWave chart">
+            <img src="assets/streamwave-monthly-views.png" alt="StreamWave monthly viewing trend analytics chart">
+          </button>
+          <div class="case-body">
+            <div class="case-top">
+              <span class="case-num">01</span>
+              <span class="case-kind">SQL + Python Analytics</span>
             </div>
-            <a class="project-link" href="https://github.com/austinechi1/StreamWave_Analytics_Portfolio" target="_blank" rel="noopener">View Case Study → GitHub</a>
-          </div>
-        </article>
-
-        <article class="analytics-case reveal">
-          <div class="analytics-image"><img src="assets/uk-retail-dashboard.png" alt="UK Online Retail Performance Dashboard overview showing revenue, orders, customers, returns, products, and countries"></div>
-          <div class="analytics-case-content">
-            <div class="project-index">02 · Business Intelligence</div>
-            <h3>UK Online Retail Performance Dashboard</h3>
-            <div class="case-grid">
-              <div><strong>Problem</strong><p>How can retail transaction data reveal sales performance, customer value, product trends, and the business impact of returns?</p></div>
-              <div><strong>Process</strong><p>Cleaned and classified transactions in Power Query, built a data model and DAX measures, then designed a three-page interactive report.</p></div>
-              <div><strong>Tools</strong><p>Power BI, Power Query, DAX, Data Modelling</p></div>
-              <div><strong>Results</strong><p>Revealed £9.77M net revenue, approximately 20K orders, 4K active customers, and an 8.4% return rate.</p></div>
+            <h3>StreamWave Content Performance Analytics</h3>
+            <div class="case-tabs" role="tablist" aria-label="StreamWave case details">
+              <button class="tab active" type="button" data-tab="0">Problem</button>
+              <button class="tab" type="button" data-tab="1">Process</button>
+              <button class="tab" type="button" data-tab="2">Tools</button>
+              <button class="tab" type="button" data-tab="3">Results</button>
+            </div>
+            <div class="tab-panels">
+              <p class="panel active">Which titles, genres, devices, and regions drive reach, engagement, and modeled revenue?</p>
+              <p class="panel">Cleaned 15,035 records, built SQL analyses, explored trends in Python, and translated findings into recommendations.</p>
+              <p class="panel"><span class="pill">PostgreSQL</span><span class="pill">Python</span><span class="pill">Matplotlib</span></p>
+              <p class="panel">Identified <b>Drama</b> as the reach leader, <b>Animation</b> as the completion leader, and <b>December</b> as the peak viewing month.</p>
             </div>
             <div class="case-actions">
-              <a class="project-link" href="https://github.com/austinechi1/UK-Online-Retail-PowerBI-Dashboard/tree/main" target="_blank" rel="noopener">View Case Study → GitHub</a>
-              <a class="project-link" href="https://github.com/austinechi1/UK-Online-Retail-PowerBI-Dashboard/raw/refs/heads/main/UK_Online_Retail_Dashboard.pbix" download>Download Interactive Power BI File →</a>
+              <a class="link-arrow" href="https://github.com/austinechi1/StreamWave_Analytics_Portfolio" target="_blank" rel="noopener" data-cursor="Open">View case study on GitHub <span>↗</span></a>
             </div>
           </div>
         </article>
-      </div>
 
-      <div class="other-work-heading reveal">
-        <p class="eyebrow">03 · Other Technical Work</p>
-        <h3>Web projects and digital experiences</h3>
-      </div>
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <div class="project-card-copy">
-            <p class="project-type">Business Website</p>
-            <h3>S.H.E. Social</h3>
-            <p>A live agency website and growing client-resource system built with HTML, CSS, JavaScript, GitHub, and Netlify.</p>
-            <p class="project-stack">HTML · CSS · JavaScript · GitHub · Netlify</p>
-            <div class="project-actions"><a href="https://she-social.com" target="_blank" rel="noopener">Live site ↗</a><a href="https://github.com/austinechi1/she_social_web" target="_blank" rel="noopener">Source ↗</a></div>
+        <!-- Case 2 -->
+        <article class="case reverse reveal" data-cat="analytics" data-tools="powerbi excel dax">
+          <button class="case-image" type="button" data-lightbox="assets/uk-retail-dashboard.png" data-cursor="Zoom" aria-label="Enlarge UK Retail dashboard">
+            <img src="assets/uk-retail-dashboard.png" alt="UK Online Retail Performance Dashboard overview showing revenue, orders, customers, returns, products, and countries">
+          </button>
+          <div class="case-body">
+            <div class="case-top">
+              <span class="case-num">02</span>
+              <span class="case-kind">Business Intelligence</span>
+            </div>
+            <h3>UK Online Retail Performance Dashboard</h3>
+            <div class="case-tabs" role="tablist" aria-label="UK Retail case details">
+              <button class="tab active" type="button" data-tab="0">Problem</button>
+              <button class="tab" type="button" data-tab="1">Process</button>
+              <button class="tab" type="button" data-tab="2">Tools</button>
+              <button class="tab" type="button" data-tab="3">Results</button>
+            </div>
+            <div class="tab-panels">
+              <p class="panel active">How can retail transaction data reveal sales performance, customer value, product trends, and the business impact of returns?</p>
+              <p class="panel">Cleaned and classified transactions in Power Query, built a data model and DAX measures, then designed a three-page interactive report.</p>
+              <p class="panel"><span class="pill">Power BI</span><span class="pill">Power Query</span><span class="pill">DAX</span><span class="pill">Data Modelling</span></p>
+              <p class="panel">Revealed <b>£9.77M</b> net revenue, approximately <b>20K</b> orders, <b>4K</b> active customers, and an <b>8.4%</b> return rate.</p>
+            </div>
+            <div class="case-actions">
+              <a class="link-arrow" href="https://github.com/austinechi1/UK-Online-Retail-PowerBI-Dashboard/tree/main" target="_blank" rel="noopener" data-cursor="Open">View case study on GitHub <span>↗</span></a>
+              <a class="link-arrow" href="https://github.com/austinechi1/UK-Online-Retail-PowerBI-Dashboard/raw/refs/heads/main/UK_Online_Retail_Dashboard.pbix" download data-cursor="Get">Download .pbix file <span>↓</span></a>
+            </div>
           </div>
         </article>
-        <article class="project-card reveal">
-          <div class="project-card-copy">
-            <p class="project-type">Community Landing Page</p>
-            <h3>The GAP</h3>
-            <p>A God-first community website designed to help creative entrepreneurs move from vision to consistent execution.</p>
-            <p class="project-stack">HTML · CSS · JavaScript · GitHub Pages</p>
-            <div class="project-actions"><a href="https://austinechi1.github.io/the_gap/" target="_blank" rel="noopener">Live site ↗</a><a href="https://github.com/austinechi1/the_gap" target="_blank" rel="noopener">Source ↗</a></div>
-          </div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-card-copy">
-            <p class="project-type">E-commerce Concept</p>
-            <h3>YahFlex</h3>
-            <p>A responsive Christian apparel storefront concept centered on faith, story, and product discovery.</p>
-            <p class="project-stack">HTML · CSS · JavaScript</p>
-            <div class="project-actions"><a href="https://github.com/austinechi1/yahflex-website" target="_blank" rel="noopener">View source ↗</a></div>
-          </div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-card-copy">
-            <p class="project-type">Event Experience</p>
-            <h3>Let My Worship Rise</h3>
-            <p>An elegant event landing page for an Altar of Incense worship night, with details, scripture, and registration content.</p>
-            <p class="project-stack">HTML · CSS · JavaScript · GitHub Pages</p>
-            <div class="project-actions"><a href="https://austinechi1.github.io/let_my_worship_rise/" target="_blank" rel="noopener">Live site ↗</a><a href="https://github.com/austinechi1/let_my_worship_rise" target="_blank" rel="noopener">Source ↗</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
 
-    <section class="skills section" id="skills">
-      <div class="section-label">04 · Toolkit</div>
-      <div class="skills-intro reveal">
-        <p class="eyebrow">My working toolkit</p>
-        <h2>Tools I use to analyze, build, and communicate.</h2>
-      </div>
-      <div class="toolkit-poster reveal">
-        <img src="assets/work-toolkit.png" alt="Work toolkit including Excel, Power BI, SQL, Python, pandas, Matplotlib, Seaborn, AI tools, web development tools, and Adobe creative tools">
-      </div>
-    </section>
-
-    <section class="story section" id="story">
-      <div class="section-label">05 · Beyond Data</div>
-      <div class="beyond-panel reveal">
-        <div>
-          <p class="eyebrow">Media · Communication · Music</p>
-          <h2>A creative background that strengthens analytical communication.</h2>
-          <p>Five years in television broadcasting and media production taught me to manage complex workflows, communicate with clarity, and present information visually. Today, those skills support my work in analytics rather than define it.</p>
-          <a class="button button-text light-link" href="https://www.youtube.com/@austinchi2791" target="_blank" rel="noopener">Listen to my music ↗</a>
+        <!-- Web projects -->
+        <div class="web-grid">
+          <article class="web-card reveal" data-cat="web" data-tools="html css js github" data-tilt>
+            <div class="web-visual web-she"><img src="assets/she-social-logo.jpg" alt="S.H.E. Social logo"></div>
+            <div class="web-copy">
+              <p class="web-type">Business Website</p>
+              <h3>S.H.E. Social</h3>
+              <p>A live agency website and growing client-resource system.</p>
+              <p class="web-stack">HTML · CSS · JavaScript · GitHub · Netlify</p>
+              <div class="web-actions"><a href="https://she-social.com" target="_blank" rel="noopener" data-cursor="Visit">Live site ↗</a><a href="https://github.com/austinechi1/she_social_web" target="_blank" rel="noopener" data-cursor="Code">Source ↗</a></div>
+            </div>
+          </article>
+          <article class="web-card reveal" data-cat="web" data-tools="html css js github" data-tilt>
+            <div class="web-visual web-gap"><img src="assets/the-gap-logo.png" alt="The GAP logo"></div>
+            <div class="web-copy">
+              <p class="web-type">Community Landing Page</p>
+              <h3>The GAP</h3>
+              <p>A God-first community website helping creative entrepreneurs move from vision to consistent execution.</p>
+              <p class="web-stack">HTML · CSS · JavaScript · GitHub Pages</p>
+              <div class="web-actions"><a href="https://austinechi1.github.io/the_gap/" target="_blank" rel="noopener" data-cursor="Visit">Live site ↗</a><a href="https://github.com/austinechi1/the_gap" target="_blank" rel="noopener" data-cursor="Code">Source ↗</a></div>
+            </div>
+          </article>
+          <article class="web-card reveal" data-cat="web" data-tools="html css js" data-tilt>
+            <div class="web-visual web-type-block yah"><span>Yah</span><span>Flex</span></div>
+            <div class="web-copy">
+              <p class="web-type">E-commerce Concept</p>
+              <h3>YahFlex</h3>
+              <p>A responsive Christian apparel storefront concept centered on faith, story, and product discovery.</p>
+              <p class="web-stack">HTML · CSS · JavaScript</p>
+              <div class="web-actions"><a href="https://github.com/austinechi1/yahflex-website" target="_blank" rel="noopener" data-cursor="Code">View source ↗</a></div>
+            </div>
+          </article>
+          <article class="web-card reveal" data-cat="web" data-tools="html css js github" data-tilt>
+            <div class="web-visual web-type-block worship"><span>Let My</span><span>Worship</span><strong>Rise</strong></div>
+            <div class="web-copy">
+              <p class="web-type">Event Experience</p>
+              <h3>Let My Worship Rise</h3>
+              <p>An elegant event landing page for an Altar of Incense worship night, with details, scripture, and registration.</p>
+              <p class="web-stack">HTML · CSS · JavaScript · GitHub Pages</p>
+              <div class="web-actions"><a href="https://austinechi1.github.io/let_my_worship_rise/" target="_blank" rel="noopener" data-cursor="Visit">Live site ↗</a><a href="https://github.com/austinechi1/let_my_worship_rise" target="_blank" rel="noopener" data-cursor="Code">Source ↗</a></div>
+            </div>
+          </article>
         </div>
-        <img src="assets/austine-camera-production.jpg" alt="Nwachukwu Austine working in media production">
+      </div>
+
+      <div class="all-repos">
+        <a class="btn btn-dark" href="https://github.com/austinechi1?tab=repositories" target="_blank" rel="noopener" data-magnetic data-cursor="Open">View all repositories ↗</a>
       </div>
     </section>
 
+    <!-- TOOLKIT -->
+    <section class="skills section" id="skills">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <span class="section-name">Toolkit</span>
+      </div>
+      <div class="skills-heading">
+        <h2 class="big-title split-words">Tools I use to analyze, build, and <mark>communicate.</mark></h2>
+        <p class="skills-hint reveal">Pick a category — or hover a tool to see which projects it powered.</p>
+      </div>
+      <div class="filters tool-filters" role="tablist" aria-label="Filter tools">
+        <button class="filter active" type="button" data-tool-filter="all">All</button>
+        <button class="filter" type="button" data-tool-filter="data">Data &amp; BI</button>
+        <button class="filter" type="button" data-tool-filter="ai">AI</button>
+        <button class="filter" type="button" data-tool-filter="web">Web</button>
+        <button class="filter" type="button" data-tool-filter="creative">Creative</button>
+      </div>
+      <div class="tool-grid" id="toolGrid"><!-- built by script.js --></div>
+      <div class="tool-used" aria-live="polite"><span>Hover a tool</span></div>
+    </section>
+
+    <!-- BEYOND DATA -->
+    <section class="story section" id="story">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <span class="section-name">Beyond Data</span>
+      </div>
+      <div class="story-heading">
+        <h2 class="big-title split-words">A creative background that sharpens <mark>analytical communication.</mark></h2>
+        <div class="story-side reveal">
+          <p>Five years in television broadcasting and media production taught me to manage complex workflows, communicate with clarity, and present information visually. Today, those skills support my work in analytics rather than define it.</p>
+          <a class="btn btn-primary" href="https://www.youtube.com/@austinchi2791" target="_blank" rel="noopener" data-magnetic data-cursor="Play">▶ Listen to my music</a>
+        </div>
+      </div>
+      <div class="gallery" data-cursor="Drag" tabindex="0" aria-label="Photo gallery, scroll horizontally">
+        <figure class="g-item tall"><img src="assets/austine-camera-production.jpg" alt="Austine operating a camera in media production" draggable="false"><figcaption>Media production</figcaption></figure>
+        <figure class="g-item wide"><img src="assets/austine-public-speaking.jpg" alt="Austine speaking on stage with a microphone" draggable="false"><figcaption>Public speaking</figcaption></figure>
+        <figure class="g-item wide"><img src="assets/austine-university-award.jpg" alt="Austine receiving a university award certificate" draggable="false"><figcaption>University recognition</figcaption></figure>
+        <figure class="g-item tall"><img src="assets/austine-lakeside.jpg" alt="Austine by a lake" draggable="false"><figcaption>Off the clock</figcaption></figure>
+        <figure class="g-item wide"><img src="assets/austine-university-speaking.jpg" alt="Austine presenting at a university event" draggable="false"><figcaption>Presenting research</figcaption></figure>
+        <figure class="g-item tall"><img src="assets/austine-profile.jpg" alt="Austine in a city square" draggable="false"><figcaption>Always exploring</figcaption></figure>
+      </div>
+      <div class="gallery-controls">
+        <button type="button" class="g-btn" data-dir="-1" aria-label="Previous photos">←</button>
+        <div class="g-progress"><span></span></div>
+        <button type="button" class="g-btn" data-dir="1" aria-label="Next photos">→</button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="contact section" id="contact">
-      <div class="contact-image reveal"><img src="assets/austine-headshot.jpg" alt="Nwachukwu Austine professional headshot"></div>
-      <div class="contact-copy reveal">
-        <div class="section-label">06 · Contact</div>
-        <p class="eyebrow">Open to opportunities</p>
-        <h2>Open to Data Analyst and Business Analyst internships and entry-level roles.</h2>
-        <p>I bring analytical curiosity, business awareness, strong communication, and a growing portfolio of hands-on data projects.</p>
-        <div class="contact-buttons">
-          <a class="button button-light" href="mailto:austinechi.fx@gmail.com">Contact me ↗</a>
-          <a class="button contact-outline" href="https://www.linkedin.com/in/nwachukwuaustine/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="button contact-outline" href="https://github.com/austinechi1" target="_blank" rel="noopener">GitHub ↗</a>
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <span class="section-name">Contact</span>
+      </div>
+      <h2 class="contact-title">
+        <span class="line"><span class="split">Let’s build</span></span>
+        <span class="line"><span class="split">something <em>clear.</em></span></span>
+      </h2>
+      <div class="contact-grid">
+        <div class="contact-image reveal" data-tilt><img src="assets/austine-headshot.jpg" alt="Nwachukwu Austine professional headshot"></div>
+        <div class="contact-copy reveal">
+          <p class="lead">Open to <b>Data Analyst</b> and <b>Business Analyst</b> internships and entry-level roles. I bring analytical curiosity, business awareness, strong communication, and a growing portfolio of hands-on data projects.</p>
+          <button class="big-email copy-email" type="button" data-email="austinechi.fx@gmail.com" data-cursor="Copy">
+            <span class="copy-label">austinechi.fx@gmail.com</span>
+            <span class="big-email-icon" aria-hidden="true">⧉</span>
+          </button>
+          <div class="contact-buttons">
+            <a class="btn btn-primary" href="mailto:austinechi.fx@gmail.com" data-magnetic data-cursor="Say hi">Email me ↗</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/nwachukwuaustine/" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+            <a class="btn btn-ghost" href="https://github.com/austinechi1" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Nwachukwu Austine</p>
-    <a href="#home">Back to top ↑</a>
+    <div class="footer-big" aria-hidden="true">AUSTINE</div>
+    <div class="footer-row">
+      <p>© <span id="year"></span> Nwachukwu Austine</p>
+      <p class="local-time">Local time · <span id="clock">--:--</span></p>
+      <a href="#home" data-magnetic>Back to top ↑</a>
+    </div>
   </footer>
+
+  <!-- Lightbox + toast -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button class="lightbox-close" type="button" aria-label="Close preview">✕</button>
+    <img alt="">
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>
