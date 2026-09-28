@@ -208,7 +208,7 @@ mark { background: none; color: var(--terracotta); }
 .filter:hover { background: rgba(39,21,15,.08); }
 .filter.active { background: var(--ink); color: var(--cream); }
 
-.work-list { display: grid; gap: 2rem; }
+.work-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
 .case { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); border-radius: 28px; overflow: hidden; background: var(--ink); color: var(--cream); box-shadow: 0 30px 70px rgba(55,25,15,.22); transition: opacity .5s, transform .5s var(--ease), outline-color .3s; outline: 3px solid transparent; outline-offset: 4px; }
 .case.reverse .case-image { order: 2; }
 .case-image { min-width: 0; position: relative; display: grid; place-items: center; padding: clamp(1rem, 2.5vw, 2.2rem); background: #f8f2ec; cursor: zoom-in; overflow: hidden; }
@@ -362,7 +362,7 @@ footer:hover .footer-big { color: rgba(212,131,98,.18); }
   .about-grid, .contact-grid, .story-heading { grid-template-columns: 1fr; }
   .about-image { max-width: 480px; }
   .contact-image { max-width: 320px; }
-  .case, .case.reverse { grid-template-columns: 1fr; }
+  .case, .case.reverse { grid-template-columns: minmax(0, 1fr); }
   .case.reverse .case-image { order: 0; }
   .case-image { width: 100%; }
 }
