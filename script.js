@@ -7,37 +7,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = window.matchMedia('(pointer: fine)').matches;
   const body = document.body;
-
-  /* ---------- Preloader ---------- */
-  const loader = $('.loader');
-  const loaderNum = $('#loaderNum');
-  const loaderBar = $('.loader-bar span');
-  let loaded = false;
-  const finishLoading = () => {
-    if (loaded) return;
-    loaded = true;
-    loader?.classList.add('done');
-    body.classList.remove('is-loading');
-    setTimeout(() => body.classList.add('ready'), 250);
-    setTimeout(() => loader?.remove(), 1200);
-  };
-  if (reduceMotion || !loader) {
-    finishLoading();
-  } else {
-    const start = performance.now();
-    const duration = 1200;
-    const tick = (now) => {
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      const val = Math.round(eased * 100);
-      if (loaderNum) loaderNum.textContent = val;
-      if (loaderBar) loaderBar.style.width = val + '%';
-      if (p < 1) requestAnimationFrame(tick);
-      else setTimeout(finishLoading, 150);
-    };
-    requestAnimationFrame(tick);
-    setTimeout(finishLoading, 3500); // safety net
-  }
+  requestAnimationFrame(() => body.classList.add('ready'));
 
   /* ---------- Split headings into words ---------- */
   $$('.split-words').forEach((el) => {
@@ -220,54 +190,6 @@
     });
   }
 
-  /* ---------- Marquee (reacts to scroll speed) ---------- */
-  const track = $('.marquee-track');
-  if (track && !reduceMotion) {
-    let x = 0;
-    let dir = -1;
-    let boost = 0;
-    const run = () => {
-      if (scrollVelocity !== 0) {
-        dir = scrollVelocity > 0 ? -1 : 1;
-        boost = Math.min(Math.abs(scrollVelocity) * 0.25, 14);
-        scrollVelocity = 0;
-      }
-      boost *= 0.94;
-      x += dir * (0.6 + boost);
-      const half = track.scrollWidth / 2;
-      if (x <= -half) x += half;
-      if (x > 0) x -= half;
-      track.style.transform = `translateX(${x}px)`;
-      requestAnimationFrame(run);
-    };
-    run();
-  }
-
-  /* ---------- Count-up stats ---------- */
-  const countObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      countObserver.unobserve(el);
-      const to = parseFloat(el.dataset.to);
-      const decimals = parseInt(el.dataset.decimals || '0', 10);
-      const fmt = (v) => {
-        const s = v.toFixed(decimals);
-        return el.dataset.format === 'comma' ? Number(s).toLocaleString('en-US') : s;
-      };
-      if (reduceMotion) { el.textContent = fmt(to); return; }
-      const start = performance.now();
-      const dur = 1800;
-      const step = (now) => {
-        const p = Math.min((now - start) / dur, 1);
-        el.textContent = fmt(to * (1 - Math.pow(1 - p, 4)));
-        if (p < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    });
-  }, { threshold: 0.6 });
-  $$('.count').forEach((el) => countObserver.observe(el));
-
   /* ---------- Project filters ---------- */
   const projectItems = $$('.work-list [data-cat]');
   $$('[data-filter]').forEach((btn) => {
@@ -282,27 +204,6 @@
         item.classList.toggle('is-hidden', !show);
         if (show && !reduceMotion) {
           item.animate([{ opacity: 0, transform: 'translateY(24px)' }, { opacity: 1, transform: 'none' }], { duration: 550, easing: 'cubic-bezier(.22,1,.36,1)' });
-        }
-      });
-    });
-  });
-
-  /* ---------- Case study tabs ---------- */
-  $$('.case').forEach((c) => {
-    const tabs = $$('.tab', c);
-    const panels = $$('.panel', c);
-    const activate = (idx) => {
-      tabs.forEach((t, i) => { t.classList.toggle('active', i === idx); t.setAttribute('aria-selected', String(i === idx)); });
-      panels.forEach((p, i) => p.classList.toggle('active', i === idx));
-    };
-    tabs.forEach((t, i) => {
-      t.setAttribute('role', 'tab');
-      t.addEventListener('click', () => activate(i));
-      t.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-          const next = (i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
-          tabs[next].focus();
-          activate(next);
         }
       });
     });
@@ -364,12 +265,8 @@
     { key: 'powerbi', name: 'Power BI', cat: 'data', img: 'assets/tool-power-bi.webp', color: '#f2c811' },
     { key: 'sql', name: 'SQL / PostgreSQL', cat: 'data', img: 'assets/tools/postgresql.svg', color: '#336791' },
     { key: 'python', name: 'Python', cat: 'data', img: 'assets/tools/python.svg', color: '#3776ab' },
-    { key: 'pandas', name: 'pandas', cat: 'data', img: 'assets/tools/pandas.svg', color: '#150458' },
-    { key: 'matplotlib', name: 'Matplotlib', cat: 'data', img: 'assets/tools/matplotlib.svg', color: '#11557c' },
-    { key: 'seaborn', name: 'Seaborn', cat: 'data', img: 'assets/tools/seaborn.png', color: '#4c72b0' },
     { key: 'chatgpt', name: 'ChatGPT', cat: 'ai', img: 'assets/tool-chatgpt.jpg', color: '#10a37f' },
     { key: 'claude', name: 'Claude', cat: 'ai', img: 'assets/tool-claude.webp', color: '#d97757' },
-    { key: 'copilot', name: 'Microsoft Copilot', cat: 'ai', img: 'assets/tools/copilot.png', color: '#0078d4' },
     { key: 'html', name: 'HTML5', cat: 'web', img: 'assets/tools/html5.svg', color: '#e34f26' },
     { key: 'css', name: 'CSS3', cat: 'web', img: 'assets/tools/css3.svg', color: '#1572b6' },
     { key: 'js', name: 'JavaScript', cat: 'web', img: 'assets/tools/javascript.svg', color: '#f7df1e' },
@@ -384,16 +281,8 @@
   ];
   const catNames = { data: 'Data & BI', ai: 'AI', web: 'Web', creative: 'Creative' };
   const toolGrid = $('#toolGrid');
-  const toolUsed = $('.tool-used');
-  const projectsWithTools = $$('[data-tools]').map((el) => ({
-    el,
-    name: $('h3', el).textContent,
-    tools: el.dataset.tools.split(' '),
-  }));
-
   tools.forEach((t) => {
-    const b = document.createElement('button');
-    b.type = 'button';
+    const b = document.createElement('div');
     b.className = 'tool';
     b.dataset.cat = t.cat;
     b.dataset.key = t.key;
@@ -404,33 +293,6 @@
       <span class="tool-icon">${t.img ? `<img src="${t.img}" alt="${t.name} logo" loading="lazy">` : t.label}</span>
       <span class="tool-name">${t.name}</span>`;
     toolGrid.appendChild(b);
-  });
-
-  const describeTool = (btn) => {
-    const t = tools.find((x) => x.key === btn.dataset.key);
-    const used = projectsWithTools.filter((p) => p.tools.includes(t.key));
-    toolUsed.innerHTML = '';
-    const head = document.createElement('span');
-    head.innerHTML = `<b>${t.name}</b> ${used.length ? '— used in:' : '— part of my everyday toolkit.'}`;
-    toolUsed.appendChild(head);
-    used.forEach((p) => {
-      const a = document.createElement('button');
-      a.type = 'button';
-      a.className = 'pill';
-      a.textContent = p.name + ' ↑';
-      a.addEventListener('click', () => {
-        $$('[data-filter="all"]')[0]?.click();
-        p.el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
-        p.el.classList.add('is-lit');
-        setTimeout(() => p.el.classList.remove('is-lit'), 2200);
-      });
-      toolUsed.appendChild(a);
-    });
-  };
-  $$('.tool', toolGrid).forEach((btn) => {
-    btn.addEventListener('mouseenter', () => describeTool(btn));
-    btn.addEventListener('focus', () => describeTool(btn));
-    btn.addEventListener('click', () => describeTool(btn));
   });
 
   $$('[data-tool-filter]').forEach((btn) => {
