@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Nwachukwu Austine, a data and business analyst with experience in media production, public speaking, web development, and gospel music.">
+  <meta name="theme-color" content="#1b0c08">
+  <title>Nwachukwu Austine | Data & Business Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261003-1">
+</head>
+<body>
+
+  <!-- Custom cursor + scroll progress -->
+  <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Nwachukwu Austine home" data-magnetic>
+      <span class="brand-mark">NA</span>
+      <span class="brand-name">Nwachukwu Austine</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about" data-num="01">About</a>
+      <a href="#projects" data-num="02">Work</a>
+      <a href="#skills" data-num="03">Toolkit</a>
+      <a href="#story" data-num="04">Beyond Data</a>
+      <a href="#contact" class="nav-cta" data-magnetic>Let’s talk <span aria-hidden="true">→</span></a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg-word" aria-hidden="true">DATA</div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> Open to Data &amp; Business Analyst roles</p>
+        <h1 class="hero-title">
+          <span class="line"><span class="split">I turn raw data</span></span>
+          <span class="line"><span class="split">into <span class="rotator" aria-live="polite"><span class="rotator-word">clear direction.</span></span></span></span>
+        </h1>
+        <p class="hero-text">Data &amp; Business Analyst · Information Systems and Technology. I transform complex information into practical insights, clear visual stories, and recommendations people can act on.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects" data-magnetic data-cursor="Go">Explore my work <span aria-hidden="true">↓</span></a>
+          <button class="btn btn-ghost copy-email" type="button" data-email="austinechi.fx@gmail.com" data-magnetic data-cursor="Copy">
+            <span class="copy-label">austinechi.fx@gmail.com</span> <span aria-hidden="true">⧉</span>
+          </button>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <span class="section-name">About</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal" data-tilt>
+          <img src="assets/austine-full.jpg" alt="Nwachukwu Austine standing outside a modern building">
+          <span class="img-tag">Hi, I’m Austine</span>
+        </div>
+        <div class="about-copy">
+          <h2 class="big-title split-words">I connect data, business questions, and <mark>clear decisions.</mark></h2>
+          <p class="reveal">I’m Nwachukwu Austine, an Information Systems and Technology student building a career in data and business analysis. I turn messy information into useful insights, then make those insights easy to understand.</p>
+          <p class="reveal">Five years in television and media taught me how to tell a clear story with the evidence.</p>
+          <dl class="about-facts reveal">
+            <div><dt>Focus</dt><dd>Data &amp; Business Analytics</dd></div>
+            <div><dt>Study</dt><dd>Information Systems &amp; Technology</dd></div>
+            <div><dt>Current workplace</dt><dd>S.H.E. Social, LLC</dd></div>
+            <div><dt>Available for</dt><dd>Internships &amp; Entry-Level Roles</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <span class="section-name">Selected Work</span>
+      </div>
+      <div class="projects-heading">
+        <h2 class="big-title split-words">Analysis you can <mark>see.</mark></h2>
+        <div class="filters" role="tablist" aria-label="Filter projects">
+          <button class="filter active" type="button" data-filter="all" role="tab" aria-selected="true">All <sup>7</sup></button>
+          <button class="filter" type="button" data-filter="analytics" role="tab" aria-selected="false">Analytics <sup>3</sup></button>
+          <button class="filter" type="button" data-filter="web" role="tab" aria-selected="false">Web <sup>4</sup></button>
+        </div>
+      </div>
+
+      <div class="work-list">
+        <!-- Case 1 -->
+        <article class="case reveal" data-cat="analytics" data-tools="sql python matplotlib">
+          <button class="case-image" type="button" data-lightbox="assets/streamwave-monthly-views.png" data-cursor="Zoom" aria-label="Enlarge StreamWave chart">
+            <img src="assets/streamwave-monthly-views.png" alt="StreamWave monthly viewing trend analytics chart">
+          </button>
+          <div class="case-body">
+            <div class="case-top">
+              <span class="case-num">01</span>
+              <span class="case-kind">SQL + Python Analytics</span>
+            </div>
+            <h3>StreamWave Content Performance Analytics</h3>
+            <p class="case-insight">Drama led in reach. Animation had the highest completion rate.</p>
+            <p class="case-method">13,123 cleaned records · PostgreSQL · Python</p>
+            <div class="case-actions">
+              <a class="link-arrow" href="https://github.com/austinechi1/StreamWave_Analytics_Portfolio" target="_blank" rel="noopener" data-cursor="Open">View case study on GitHub <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 2 -->
+        <article class="case reverse reveal" data-cat="analytics" data-tools="powerbi excel dax">
+          <button class="case-image" type="button" data-lightbox="assets/uk-retail-dashboard.png" data-cursor="Zoom" aria-label="Enlarge UK Retail dashboard">
+            <img src="assets/uk-retail-dashboard.png" alt="UK Online Retail Performance Dashboard overview showing revenue, orders, customers, returns, products, and countries">
+          </button>
+          <div class="case-body">
+            <div class="case-top">
+              <span class="case-num">02</span>
+              <span class="case-kind">Business Intelligence</span>
+            </div>
+            <h3>UK Online Retail Performance Dashboard</h3>
+            <p class="case-insight">£9.77M net revenue and an 8.4% return rate, brought together in an interactive report.</p>
+            <p class="case-method">Power BI · Power Query · DAX</p>
+            <div class="case-actions">
+              <a class="link-arrow" href="https://github.com/austinechi1/UK-Online-Retail-PowerBI-Dashboard/tree/main" target="_blank" rel="noopener" data-cursor="Open">View case study on GitHub <span>↗</span></a>
+              <a class="link-arrow" href="https://github.com/austinechi1/UK-Online-Retail-PowerBI-Dashboard/raw/refs/heads/main/UK_Online_Retail_Dashboard.pbix" download data-cursor="Get">Download Interactive Power BI File <span>↓</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 3 -->
+        <article class="case reveal" data-cat="analytics" data-tools="excel python pandas plotly streamlit forecasting">
+          <button class="case-image" type="button" data-lightbox="https://raw.githubusercontent.com/austinechi1/Nexus-Supply-Chain-Analytics/main/nexus-forecast-final.jpg" data-cursor="Zoom" aria-label="Enlarge Nexus Supply Chain Analytics dashboard">
+            <img src="https://raw.githubusercontent.com/austinechi1/Nexus-Supply-Chain-Analytics/main/nexus-forecast-final.jpg" alt="Nexus Supply Chain Analytics interactive forecasting dashboard">
+          </button>
+          <div class="case-body">
+            <div class="case-top">
+              <span class="case-num">03</span>
+              <span class="case-kind">Interactive Analytics + Forecasting</span>
+            </div>
+            <h3>Nexus Supply Chain Analytics</h3>
+            <p class="case-insight">£115.18M in inventory analyzed, with delivery performance, supplier risk, stockout risk, and a six-month inventory forecast in one interactive application.</p>
+            <p class="case-method">Excel · Python · pandas · Plotly · Streamlit</p>
+            <div class="case-actions">
+              <a class="link-arrow" href="https://srlfk2tvpyacbyrvfdyoss.streamlit.app/" target="_blank" rel="noopener" data-cursor="Open">Launch live dashboard <span>↗</span></a>
+              <a class="link-arrow" href="https://github.com/austinechi1/Nexus-Supply-Chain-Analytics" target="_blank" rel="noopener" data-cursor="Code">View case study on GitHub <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Web projects -->
+        <div class="web-grid">
+          <article class="web-card reveal" data-cat="web" data-tools="html css js github" data-tilt>
+            <div class="web-visual web-she"><img src="assets/she-social-logo.jpg" alt="S.H.E. Social logo"></div>
+            <div class="web-copy">
+              <p class="web-type">Business Website</p>
+              <h3>S.H.E. Social</h3>
+              <p>A live agency website and growing client-resource system.</p>
+              <p class="web-stack">HTML · CSS · JavaScript · GitHub · Netlify</p>
+              <div class="web-actions"><a href="https://she-social.com" target="_blank" rel="noopener" data-cursor="Visit">Live site ↗</a><a href="https://github.com/austinechi1/she_social_web" target="_blank" rel="noopener" data-cursor="Code">Source ↗</a></div>
+            </div>
+          </article>
+          <article class="web-card reveal" data-cat="web" data-tools="html css js github" data-tilt>
+            <div class="web-visual web-gap"><img src="assets/the-gap-logo.png" alt="The GAP logo"></div>
+            <div class="web-copy">
+              <p class="web-type">Community Landing Page</p>
+              <h3>The GAP</h3>
+              <p>A God-first community website helping creative entrepreneurs move from vision to consistent execution.</p>
+              <p class="web-stack">HTML · CSS · JavaScript · GitHub Pages</p>
+              <div class="web-actions"><a href="https://austinechi1.github.io/the_gap/" target="_blank" rel="noopener" data-cursor="Visit">Live site ↗</a><a href="https://github.com/austinechi1/the_gap" target="_blank" rel="noopener" data-cursor="Code">Source ↗</a></div>
+            </div>
+          </article>
+          <article class="web-card reveal" data-cat="web" data-tools="html css js" data-tilt>
+            <div class="web-visual web-type-block yah"><span>Yah</span><span>Flex</span></div>
+            <div class="web-copy">
+              <p class="web-type">E-commerce Concept</p>
+              <h3>YahFlex</h3>
+              <p>A responsive Christian apparel storefront concept centered on faith, story, and product discovery.</p>
+              <p class="web-stack">HTML · CSS · JavaScript</p>
+              <div class="web-actions"><a href="https://github.com/austinechi1/yahflex-website" target="_blank" rel="noopener" data-cursor="Code">View source ↗</a></div>
+            </div>
+          </article>
+          <article class="web-card reveal" data-cat="web" data-tools="html css js github" data-tilt>
+            <div class="web-visual web-type-block worship"><span>Let My</span><span>Worship</span><strong>Rise</strong></div>
+            <div class="web-copy">
+              <p class="web-type">Event Experience</p>
+              <h3>Let My Worship Rise</h3>
+              <p>An elegant event landing page for an Altar of Incense worship night, with details, scripture, and registration.</p>
+              <p class="web-stack">HTML · CSS · JavaScript · GitHub Pages</p>
+              <div class="web-actions"><a href="https://austinechi1.github.io/let_my_worship_rise/" target="_blank" rel="noopener" data-cursor="Visit">Live site ↗</a><a href="https://github.com/austinechi1/let_my_worship_rise" target="_blank" rel="noopener" data-cursor="Code">Source ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="all-repos">
+        <a class="btn btn-dark" href="https://github.com/austinechi1?tab=repositories" target="_blank" rel="noopener" data-magnetic data-cursor="Open">View all repositories ↗</a>
+      </div>
+    </section>
+
+    <!-- TOOLKIT -->
+    <section class="skills section" id="skills">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <span class="section-name">Toolkit</span>
+      </div>
+      <div class="skills-heading">
+        <h2 class="big-title split-words">Tools I use to analyze, build, and <mark>communicate.</mark></h2>
+      </div>
+      <div class="filters tool-filters" role="tablist" aria-label="Filter tools">
+        <button class="filter active" type="button" data-tool-filter="all">All</button>
+        <button class="filter" type="button" data-tool-filter="data">Data &amp; BI</button>
+        <button class="filter" type="button" data-tool-filter="ai">AI</button>
+        <button class="filter" type="button" data-tool-filter="web">Web</button>
+        <button class="filter" type="button" data-tool-filter="creative">Creative</button>
+      </div>
+      <div class="tool-grid" id="toolGrid"><!-- built by script.js --></div>
+    </section>
+
+    <!-- BEYOND DATA -->
+    <section class="story section" id="story">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <span class="section-name">Beyond Data</span>
+      </div>
+      <div class="story-heading">
+        <h2 class="big-title split-words">A creative background that sharpens <mark>analytical communication.</mark></h2>
+        <div class="story-side reveal">
+          <p>Five years in television broadcasting and media production taught me to manage complex workflows, communicate with clarity, and present information visually. Today, those skills support my work in analytics rather than define it.</p>
+          <a class="btn btn-primary" href="https://www.youtube.com/@austinchi2791" target="_blank" rel="noopener" data-magnetic data-cursor="Play">▶ Listen to my music</a>
+        </div>
+      </div>
+      <div class="gallery" data-cursor="Drag" tabindex="0" aria-label="Photo gallery, scroll horizontally">
+        <figure class="g-item tall"><img src="assets/austine-camera-production.jpg" alt="Austine operating a camera in media production" draggable="false"><figcaption>Media production</figcaption></figure>
+        <figure class="g-item wide"><img src="assets/austine-public-speaking.jpg" alt="Austine speaking on stage with a microphone" draggable="false"><figcaption>Public speaking</figcaption></figure>
+        <figure class="g-item wide"><img src="assets/austine-university-award.jpg" alt="Austine receiving a university award certificate" draggable="false"><figcaption>University recognition</figcaption></figure>
+        <figure class="g-item tall"><img src="assets/austine-lakeside.jpg" alt="Austine by a lake" draggable="false"><figcaption>Off the clock</figcaption></figure>
+        <figure class="g-item wide"><img src="assets/austine-university-speaking.jpg" alt="Austine presenting at a university event" draggable="false"><figcaption>Presenting research</figcaption></figure>
+        <figure class="g-item tall"><img src="assets/austine-profile.jpg" alt="Austine in a city square" draggable="false"><figcaption>Always exploring</figcaption></figure>
+      </div>
+      <div class="gallery-controls">
+        <button type="button" class="g-btn" data-dir="-1" aria-label="Previous photos">←</button>
+        <div class="g-progress"><span></span></div>
+        <button type="button" class="g-btn" data-dir="1" aria-label="Next photos">→</button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <span class="section-name">Contact</span>
+      </div>
+      <h2 class="contact-title">
+        <span class="line"><span class="split">Let’s build</span></span>
+        <span class="line"><span class="split">something <em>clear.</em></span></span>
+      </h2>
+      <div class="contact-grid">
+        <div class="contact-image reveal" data-tilt><img src="assets/austine-headshot.jpg" alt="Nwachukwu Austine professional headshot"></div>
+        <div class="contact-copy reveal">
+          <p class="lead">Open to <b>Data Analyst</b> and <b>Business Analyst</b> internships and entry-level roles. I bring analytical curiosity, business awareness, strong communication, and a growing portfolio of hands-on data projects.</p>
+          <button class="big-email copy-email" type="button" data-email="austinechi.fx@gmail.com" data-cursor="Copy">
+            <span class="copy-label">austinechi.fx@gmail.com</span>
+            <span class="big-email-icon" aria-hidden="true">⧉</span>
+          </button>
+          <div class="contact-buttons">
+            <a class="btn btn-primary" href="mailto:austinechi.fx@gmail.com" data-magnetic data-cursor="Say hi">Email me ↗</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/nwachukwuaustine/" target="_blank" rel="noopener" data-magnetic>LinkedIn ↗</a>
+            <a class="btn btn-ghost" href="https://github.com/austinechi1" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-big" aria-hidden="true">AUSTINE</div>
+    <div class="footer-row">
+      <p>© <span id="year"></span> Nwachukwu Austine</p>
+      <p class="local-time">Local time · <span id="clock">--:--</span></p>
+      <a href="#home" data-magnetic>Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox + toast -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button class="lightbox-close" type="button" aria-label="Close preview">✕</button>
+    <img alt="">
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js?v=20260928-2"></script>
+</body>
+</html>
