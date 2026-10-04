@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consumer Complaints Intelligence business analysis case study by Nwachukwu Austine.">
+  <title>Consumer Complaints Intelligence | Nwachukwu Austine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1b0c08;--brown:#351a12;--clay:#c96f4f;--peach:#f2c1a5;--cream:#fff7ef;--muted:#7b6258}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Space Grotesk",sans-serif;line-height:1.65}
+    header,main,footer{width:min(1120px,calc(100% - 40px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}.nav a{color:var(--ink);font-weight:700;text-decoration:none}.mark{border:2px solid var(--ink);padding:8px 12px}
+    .hero{padding:80px 0 58px;border-top:1px solid #d8c8be}.eyebrow{color:var(--clay);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:900px;margin:14px 0 18px;font:800 clamp(3rem,8vw,7rem)/.92 "Bricolage Grotesque",sans-serif;letter-spacing:-.055em}.lede{max-width:760px;font-size:1.18rem;color:var(--muted)}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-block;padding:13px 18px;border:1px solid var(--ink);color:var(--ink);font-weight:700;text-decoration:none}.btn.primary{background:var(--ink);color:var(--cream)}
+    .hero img{display:block;width:100%;margin:56px 0 0;border:1px solid #d8c8be;border-radius:18px;box-shadow:0 24px 70px #351a1220}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0 72px}.metric{padding:22px;background:#fff;border:1px solid #e5d7cf;border-radius:14px}.metric strong{display:block;font:800 1.8rem "Bricolage Grotesque",sans-serif}.metric span{font-size:.84rem;color:var(--muted)}
+    section{padding:55px 0;border-top:1px solid #d8c8be}.section-grid{display:grid;grid-template-columns:1fr 2fr;gap:60px}.section-grid h2{margin:0;font:800 clamp(2rem,4vw,3.5rem)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em}.section-grid h3{margin-top:0}.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{padding:26px;border-radius:16px;background:#fff;border:1px solid #e5d7cf}.card p{margin-bottom:0;color:var(--muted)}
+    .insight{padding:25px 0;border-bottom:1px solid #d8c8be}.insight strong{font:800 1.4rem "Bricolage Grotesque",sans-serif}.insight:last-child{border:0}.stack{display:flex;flex-wrap:wrap;gap:9px}.stack span{padding:8px 12px;border-radius:999px;background:var(--peach);font-weight:700;font-size:.82rem}
+    footer{padding:42px 0 70px;display:flex;justify-content:space-between;gap:20px}footer a{color:var(--ink);font-weight:700}
+    @media(max-width:760px){.hero{padding-top:48px}.metrics,.card-grid{grid-template-columns:1fr 1fr}.section-grid{grid-template-columns:1fr;gap:28px}}
+    @media(max-width:480px){.metrics,.card-grid{grid-template-columns:1fr}.nav{align-items:flex-start}.hero h1{font-size:3.2rem}}
+  </style>
+</head>
+<body>
+  <header><nav class="nav"><a class="mark" href="../index.html">NA</a><a href="../index.html#projects">← Back to portfolio</a></nav></header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Public Data · SQL · Python · Business Analysis</p>
+      <h1>Consumer Complaints Intelligence</h1>
+      <p class="lede">An end-to-end analysis of 490,639 official CFPB complaints, built to help consumer-protection and financial-services teams understand complaint growth, product risk, company response performance, and geographic concentration.</p>
+      <div class="actions"><a class="btn primary" href="https://cfpb-complaints-austine.streamlit.app/" target="_blank" rel="noopener">Launch live dashboard ↗</a><a class="btn" href="https://github.com/austinechi1/Consumer-Financial-Complaints-Analysis" target="_blank" rel="noopener">View GitHub repository ↗</a></div>
+      <img src="../assets/consumer-complaints-dashboard.png" alt="Consumer Complaints Intelligence interactive dashboard">
+    </section>
+    <div class="metrics"><div class="metric"><strong>490,639</strong><span>complaints analyzed</span></div><div class="metric"><strong>38.3%</strong><span>credit card share</span></div><div class="metric"><strong>99.3%</strong><span>timely responses</span></div><div class="metric"><strong>117%</strong><span>January 2025 increase</span></div></div>
+
+    <section class="section-grid"><h2>The business problem</h2><div><p>Complaint records are detailed, high-volume, and difficult to interpret quickly. Decision-makers need a clear view of where complaints are increasing, which products and issues create the greatest pressure, and whether companies are responding on time.</p><p>The project converts complaint-level public records into an analytical workflow and interactive dashboard designed for quicker investigation and evidence-based recommendations.</p></div></section>
+
+    <section class="section-grid"><h2>What I built</h2><div class="card-grid"><article class="card"><h3>Reliable data pipeline</h3><p>Combined CFPB extracts, standardized fields, removed duplicate complaint IDs, validated date coverage, and documented data-quality checks.</p></article><article class="card"><h3>Advanced SQL analysis</h3><p>Used CTEs, conditional aggregation, rankings, window functions, year-over-year comparisons, and a three-month moving average.</p></article><article class="card"><h3>Business investigation</h3><p>Analyzed product concentration, common issues, late-response rates, company performance, state patterns, and the January 2025 spike.</p></article><article class="card"><h3>Interactive delivery</h3><p>Built a responsive Streamlit and Plotly dashboard with filters, navigation, light and dark modes, KPIs, maps, tables, and downloadable visuals.</p></article></div></section>
+
+    <section class="section-grid"><h2>Key findings</h2><div><div class="insight"><strong>Credit cards led complaint volume.</strong><p>They represented 38.3% of the selected complaints, making them the largest product category in the analysis.</p></div><div class="insight"><strong>Company response performance was generally strong.</strong><p>99.3% of complaints received a timely response, while approximately 0.7% were answered late.</p></div><div class="insight"><strong>January 2025 was an unusual peak.</strong><p>Complaints increased from 14,524 in December 2024 to 31,564 in January 2025, a month-over-month increase of approximately 117%.</p></div><div class="insight"><strong>Geographic concentration matters.</strong><p>California recorded the highest state-level complaint volume, supporting the need for location-specific monitoring.</p></div></div></section>
+
+    <section class="section-grid"><h2>Recommendations</h2><div><ol><li>Prioritize root-cause analysis for credit-card and account-management complaints.</li><li>Introduce automated alerts for unusual month-over-month complaint increases.</li><li>Monitor high-volume companies alongside late-response rates instead of judging performance by volume alone.</li><li>Use state-level complaint rates with population or customer counts when internal exposure data becomes available.</li><li>Refresh the pipeline regularly so the dashboard supports ongoing operational review.</li></ol></div></section>
+
+    <section class="section-grid"><h2>Technology</h2><div class="stack"><span>PostgreSQL</span><span>Python</span><span>Pandas</span><span>Plotly</span><span>Streamlit</span><span>GitHub</span><span>Public CFPB data</span></div></section>
+  </main>
+  <footer><span>© 2026 Nwachukwu Austine</span><a href="../index.html#projects">Explore more projects ↑</a></footer>
+</body>
+</html>
